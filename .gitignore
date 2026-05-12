@@ -1,0 +1,12 @@
+# .gitignore
+.aiver
+node_modules/
+dist/
+.DS_Store
+.env
+.env.*
+__pycache__/
+*.pyc
+.venv/
+output/
+temp/
