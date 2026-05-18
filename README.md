@@ -1,22 +1,28 @@
 # Content Toolkit
 
-Herramientas de ingesta de contenido para el [Second Brain Ecosystem](https://github.com/Agents4Life/second-brain-ecosystem). Transforma medios (video, audio) en texto listo para tu vault de Obsidian.
+Herramientas de ingesta de contenido para el [Second Brain Ecosystem](https://github.com/Agents4Life/second-brain-ecosystem). Transforma medios (video, audio) en texto revisable antes de entrar al vault de Obsidian.
 
 ## Herramientas
 
 | Herramienta | Descripción | Estado |
 |------------|-------------|--------|
 | [`transcribe/`](./transcribe/) | Transcripción de video/audio a texto con Whisper | 🟢 Listo |
-| [`ingest-youtube/`](./ingest-youtube/) | Pipeline completo: YouTube → audio → transcripción → resumen inteligente → Obsidian | 🟢 Listo |
+| [`ingest-youtube/`](./ingest-youtube/) | Pipeline completo: YouTube → audio → transcripción → resumen inteligente → staging | 🟢 Listo |
 
 ## Pipeline de ingesta
 
 ```
-YouTube URL  →  yt-dlp (audio)  →  Whisper (transcripción)  →  LLM (resumen)  →  raw/ (vault)
-Video/Audio  →  ffmpeg (audio)  →  Whisper (transcripción)  →  raw/ (vault)
+YouTube URL  →  yt-dlp (audio)  →  Whisper (transcripción)  →  LLM (resumen)  →  staging
+Video/Audio  →  ffmpeg (audio)  →  Whisper (transcripción)  →  staging
 ```
 
-Todo el contenido procesado va a la carpeta `raw/` del vault de Obsidian, donde [Librarian](https://github.com/Agents4Life/librarian) puede curarlo e integrarlo al wiki.
+El output debe revisarse antes de entrar al pipeline de IA. Solo cuando el usuario decide que una fuente puede ser leída por IA, la mueve o copia a `raw/` dentro del vault. `raw/` es la frontera explícita de consentimiento para [Librarian](https://github.com/Agents4Life/librarian).
+
+Flujo recomendado:
+
+```text
+content-toolkit → staging → revisión humana → raw/ → Librarian proposals → approve/apply → wiki/
+```
 
 ## Setup
 
@@ -33,7 +39,7 @@ Cada herramienta tiene su propio `README.md` con instrucciones de instalación y
 
 ```
 content-toolkit/
-├── ingest-youtube/   ← YouTube → transcripción + resumen → Obsidian
+├── ingest-youtube/   ← YouTube → transcripción + resumen → staging
 ├── transcribe/       ← Transcripción standalone de video/audio
 └── README.md
 ```

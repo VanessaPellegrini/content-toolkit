@@ -21,6 +21,20 @@ python transcribe.py video.mp4 --model medium --lang es --format srt
 python transcribe.py video.mp4 --no-cleanup
 ```
 
+## Output y Consentimiento
+
+Por defecto, el script escribe la transcripción junto al archivo de video/audio de entrada. Usá ese resultado como staging: revisalo antes de copiarlo o moverlo al vault.
+
+En el Second Brain Ecosystem, `raw/` es la frontera explícita de consentimiento para procesamiento con IA. Librarian solo debe leer fuentes que el usuario decidió mover o copiar a `raw/`.
+
+Flujo recomendado:
+
+```text
+transcribe → staging/local output → revisión humana → raw/ → Librarian proposals
+```
+
+No uses `raw/` como destino automático para transcripciones sin revisar.
+
 ## Opciones
 
 | Opción | Default | Descripción |
