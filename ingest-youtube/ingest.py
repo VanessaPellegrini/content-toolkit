@@ -145,16 +145,33 @@ Título: {meta['title']}
 Canal: {meta['channel']}
 URL: {meta['url']}
 
-Estructura del resumen:
+## Smart Summarize — Método automático
+
+Primero identificá el tipo de contenido y elegí el mejor método:
+
+- Concepto complejo / teoría → **Feynman** (simplificación forzada)
+- Libro / textbook → **Adler** (análisis multinivel)
+- Artículo / blog post → **SQ3R** (lectura estructurada)
+- Charla / video / meeting → **Cornell** (notas en dos columnas)
+- Hechos / definiciones → **Spaced** (retención largo plazo)
+- Paper académico → **Retrieval** (recall activo)
+- Conceptos relacionados → **Concept-map** (relaciones)
+- Síntesis completa → **Condense** (todos los métodos)
+
+Al inicio del resumen, indicá: "Método: **[X]** porque [razón]"
+
+## Estructura del resumen
+
 1. **Tesis central** — idea principal en 1-2 oraciones
 2. **Temas clave** — cada tema con bullets concisos
 3. **Quotes destacadas** — 3-5 citas textuales importantes (en idioma original)
 4. **Aplicaciones prácticas** — qué se puede hacer con esta info
 
-Reglas:
+## Reglas
 - Respondé en español
 - Sé conciso y denso (no verbose)
 - Cita timestamps cuando sea relevante
+- Términos técnicos mantenelos en inglés original cuando sea estándar
 
 Transcripción:
 {text}"""
@@ -165,7 +182,7 @@ Transcripción:
     payload = _json.dumps({
         "model": llm_model,
         "messages": [
-            {"role": "system", "content": "Sos un experto en síntesis de contenido. Generás resúmenes densos y útiles."},
+            {"role": "system", "content": "Sos un experto en síntesis de contenido. Elegís automáticamente el mejor método de resumen según el tipo de contenido (Feynman, Adler, SQ3R, Cornell, Spaced, Retrieval, Concept-map, o Condense). Generás resúmenes densos, útiles y en español."},
             {"role": "user", "content": prompt},
         ],
         "stream": False,
