@@ -11,10 +11,10 @@ Part of the [Second Brain Ecosystem](https://github.com/Agents4Life/second-brain
 
 ## Tools
 
-| Tool | Description | Status |
-|------|-------------|--------|
-| [`transcribe/`](./transcribe/) | Video/audio transcription to text with Whisper | 🟢 Ready |
-| [`ingest-youtube/`](./ingest-youtube/) | Full pipeline: YouTube → audio → transcription → smart summary → staging | 🟢 Ready |
+| Tool | Description |
+|------|-------------|
+| [`transcribe/`](./transcribe/) | Video/audio transcription to text with Whisper |
+| [`ingest-youtube/`](./ingest-youtube/) | Full pipeline: YouTube → audio → transcription → smart summary → staging |
 
 ## Ingestion Pipeline
 
