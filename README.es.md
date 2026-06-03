@@ -1,5 +1,7 @@
 # Content Toolkit
 
+<img src="https://img.shields.io/badge/transcribe-listo-green" alt="transcribe" /> <img src="https://img.shields.io/badge/ingest_youtube-listo-green" alt="ingest-youtube" />
+
 Herramientas de ingesta de contenido para el [Second Brain Ecosystem](https://github.com/Agents4Life/second-brain-ecosystem). Transforma medios (video, audio) en texto revisable antes de entrar al vault de Obsidian.
 
 ## Herramientas

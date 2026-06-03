@@ -1,6 +1,10 @@
 # Content Toolkit
 
-Content ingestion tools for the [Second Brain Ecosystem](https://github.com/Agents4Life/second-brain-ecosystem). Transforms media (video, audio) into reviewable text before it enters the Obsidian vault.
+<img src="https://img.shields.io/badge/transcribe-ready-green" alt="transcribe" /> <img src="https://img.shields.io/badge/ingest_youtube-ready-green" alt="ingest-youtube" />
+
+Tools for content creators. Turn video and audio into text — transcribe with Whisper, extract YouTube content end-to-end with yt-dlp, and generate smart summaries with local LLMs. Everything stages for human review before entering your Obsidian vault.
+
+Part of the [Second Brain Ecosystem](https://github.com/Agents4Life/second-brain-ecosystem).
 
 ## Tools
 
