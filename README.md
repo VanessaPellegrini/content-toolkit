@@ -1,5 +1,8 @@
 # Content Toolkit
 
+<img src="https://img.shields.io/badge/Python-3-blue.svg" alt="Python 3" /> <img src="https://img.shields.io/badge/Whisper-OpenAI-yellow.svg" alt="Whisper" /> <img src="https://img.shields.io/badge/yt--dlp-supported-red.svg" alt="yt-dlp" /> <img src="https://img.shields.io/badge/FFmpeg-essential-green.svg" alt="FFmpeg" /> <img src="https://img.shields.io/badge/Ollama-local_LLM-purple.svg" alt="Ollama" />
+<img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" /> <img src="https://img.shields.io/badge/Commits-7-blue.svg" alt="Commits" /> <img src="https://img.shields.io/badge/Last_Commit-June_2026-blue.svg" alt="Last Commit" />
+
 <img src="https://img.shields.io/badge/transcribe-ready-green" alt="transcribe" /> <img src="https://img.shields.io/badge/ingest_youtube-ready-green" alt="ingest-youtube" />
 
 Tools for content creators. Turn video and audio into text — transcribe with Whisper, extract YouTube content end-to-end with yt-dlp, and generate smart summaries with local LLMs. Everything stages for human review before entering your Obsidian vault.
